@@ -94,3 +94,8 @@ li.BYO {
     width: 25%;
     height: 280px;
 }
+
+img {
+    max-width:25%;
+    height:auto;
+}
