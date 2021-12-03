@@ -1,14 +1,11 @@
-body {
-    margin: 0;
-    background: #222;
-}
+/*This contains the formatting for the navbar that is displayed on all pages*/
 
-header {
+header.nav_header {
     background-color: #FFF1E6;
     font-family: 'Delius Unicase', cursive;
 }
 
-header::after {
+header.nav_header::after {
     content: '';
     display: table;
     clear: both;
@@ -17,7 +14,6 @@ header::after {
 div.nav_container {
     width: 80%;
     margin: 0 auto;
-
 }
 
 /*Navbar logo*/

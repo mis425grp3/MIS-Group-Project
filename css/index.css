@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background: #313146;
+    color: white;
+}
+
+/*This was cleared out since the nav-bar related stuff was moved to navbar.css, sorry*/
+
+.mini_heading{
+    font-weight: bold;
+    color: yellow;
+}

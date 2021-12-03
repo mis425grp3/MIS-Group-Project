@@ -1,87 +1,96 @@
-body,
-html {
-  height: 100%;
-  font-size: 20px; 
-  font-family: "Source Serif Pro", serif;
-  line-height: 1.5em;
-  margin: 0em;
-  box-sizing: border-box;
-  background-color: forestgreen;
-  color: white;
+/*Please avoid putting text related formatting code in all-encompassing calls like "body" or "header"*/
+body {
+    height: 100%;
+    font-family: "Source Serif Pro", serif;
+    line-height: 1.5em;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #313146;
+    color: white;
 }
+
 header h1 {
-  letter-spacing: 5px;
-  font-size: 50px;
-  font-family: "Source Serif Pro", serif;
-  color: black;
-  text-align: center;
+    letter-spacing: 5px;
+    font-size: 50px;
+    font-family: "Source Serif Pro", serif;
+    color: black;
+    text-align: center;
 }
-h2.specality{
- letter-spacing: 3px;
-  font-size: 35px;
-  font-family: "Source Serif Pro", serif;
-  color: #a84064;
-  text-align: center;
-  line-height: 1.3em;
+
+h2.specality {
+    letter-spacing: 3px;
+    font-size: 35px;
+    font-family: "Source Serif Pro", serif;
+    color: #a84064;
+    text-align: center;
+    line-height: 1.3em;
 }
+
 p:first-of-type {
     color: white;
     font-style: italic;
     font-size: 20px;
-  }
-p.specality {
- letter-spacing: 3px;
-  font-size: 15px;
-  font-family: "Source Serif Pro", serif;
-  color: #a84064;
-  text-align: center;
-  line-height: 1.3em;
 }
+
+p.specality {
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-family: "Source Serif Pro", serif;
+    color: #a84064;
+    text-align: center;
+    line-height: 1.3em;
+}
+
 figcaption {
     align-self: flex-end;
     text-align: right;
     font-size: 22px;
-    font-style: "Source Serif Pro";
     line-height: 1.5;
     color: white;
     padding-right: 35px;
-  }
-h2.BYO{
- letter-spacing: 3px;
-  font-size: 35px;
-  font-family: "Source Serif Pro", serif;
-  color: #a84064;
-  text-align: center;
-  line-height: 1.3em;
 }
-h3.BYO{
- letter-spacing: 3px;
-  font-size: 25px;
-  font-family: "Source Serif Pro", serif;
-  color: #a84064;
-  text-align: center;
-  line-height: 1.3em;
+
+h2.BYO {
+    letter-spacing: 3px;
+    font-size: 35px;
+    font-family: "Source Serif Pro", serif;
+    color: #a84064;
+    text-align: center;
+    line-height: 1.3em;
 }
-li.BYO{
- letter-spacing: 3px;
-  font-size: 15px;
-  font-family: "Source Serif Pro", serif;
-  color: #a84064;
-  text-align: center;
-  line-height: 1.3em;
+
+h3.BYO {
+    letter-spacing: 3px;
+    font-size: 25px;
+    font-family: "Source Serif Pro", serif;
+    color: #a84064;
+    text-align: center;
+    line-height: 1.3em;
 }
+
+li.BYO {
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-family: "Source Serif Pro", serif;
+    color: #a84064;
+    text-align: center;
+    line-height: 1.3em;
+}
+
 #left {
-    float:left; 
-    width:25%;
-    height:280px;
+    float: left;
+    width: 25%;
+    height: 280px;
 }
-#middle{
-    float:left; 
-    width:25%;
-    height:280px;
+
+#middle {
+    float: left;
+    width: 25%;
+    height: 280px;
 }
+
 #right {
-    float:left;
-    width:25%;
-    height:280px;
+    float: left;
+    width: 25%;
+    height: 280px;
 }
