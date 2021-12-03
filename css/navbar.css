@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    background: #222;
+}
+
+header {
+    background-color: #FFF1E6;
+    font-family: 'Delius Unicase', cursive;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+div.nav_container {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+/*Navbar logo*/
+.logo {
+    float: left;
+    width: 30%;
+    padding-top: 3px;
+}
+
+nav {
+    float: right;
+}
+
+/*List parent container*/
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/*List item containers*/
+nav li {
+    display: inline-block;
+    margin-left: 110px;
+    padding-top: 25px;
+
+    /*Get the bar to be relative to the list item*/
+    position: relative;
+}
+
+/*Page hyperlinks*/
+nav a {
+    color: #2E2E44;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #CE5757;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #CE5757;
+
+    position: absolute;
+    width: 0%;
+
+    transition: all ease-in-out 150ms;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
