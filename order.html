@@ -8,23 +8,18 @@
         <link rel="stylesheet" href="css/order.css" />
     </head>
     <body>
-        <!--Nav bar begins here-->
-        <header class="nav_header">
-            <div class="nav_container">
-                <a href="index.html">
-                    <img src="images/banner.png" alt="logo" class="logo">
-                </a>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="order.html">Order</a></li>
-                        <li><a href="receipt.html">About</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <!--Changing this for an example commit-->
-        <!--Nav bar ends here-->
+    <!--Nav bar begins here-->
+    <header class="nav_header">
+        <!--Had to do funky stuff here with the doc loc ref because an a-tag as the parent screws width up-->
+        <img src="images/banner.png" alt="logo" class="logo" onclick="document.location.href='index.html'">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Nav bar ends here-->
     </body>
 </html>

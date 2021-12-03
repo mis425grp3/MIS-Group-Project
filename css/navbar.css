@@ -1,55 +1,50 @@
 /*This contains the formatting for the navbar that is displayed on all pages*/
 
-header.nav_header {
-    background-color: #FFF1E6;
-    font-family: 'Delius Unicase', cursive;
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #313146;
 }
 
-header.nav_header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-div.nav_container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/*Navbar logo*/
-.logo {
-    float: left;
-    width: 30%;
-    padding-top: 3px;
-}
-
-nav {
-    float: right;
-}
-
-/*List parent container*/
-nav ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-
-/*List item containers*/
-nav li {
-    display: inline-block;
-    margin-left: 110px;
-    padding-top: 25px;
-
-    /*Get the bar to be relative to the list item*/
-    position: relative;
-}
-
-/*Page hyperlinks*/
-nav a {
+li, a {
+    font-weight: bold;
+    font-size: 16px;
     color: #2E2E44;
     text-decoration: none;
+    font-family: 'Delius Unicase', cursive;
     text-transform: uppercase;
-    font-weight: bold;
+}
+
+header.nav_header {
+    background-color: #FFF1E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20%;
+}
+
+.logo {
+    cursor: pointer;
+    width: 35%;
+    margin-left: -20%;
+}
+
+nav ul {
+    list-style: none;
+    width: 200%;
+    padding-left: 30%;
+
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 4em;
+}
+
+nav ul li a {
+    transition: all 0.3s ease 0s;
+    position: relative;
 }
 
 nav a:hover {
@@ -65,7 +60,7 @@ nav a::after {
     position: absolute;
     width: 0%;
 
-    transition: all ease-in-out 150ms;
+    transition: all ease-in-out 100ms;
 }
 
 nav a:hover::after {
