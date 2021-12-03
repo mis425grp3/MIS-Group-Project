@@ -1,6 +1,5 @@
 /*Please avoid putting text related formatting code in all-encompassing calls like "body" or "header"*/
 body {
-    height: 100%;
     font-family: "Source Serif Pro", serif;
     margin: 0;
     box-sizing: border-box;
@@ -94,7 +93,7 @@ li.BYO {
     height: 280px;
 }
 
-img {
+figure img {
     max-width:25%;
     height:auto;
 }
