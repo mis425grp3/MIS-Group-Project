@@ -8,5 +8,6 @@ body {
 
 .mini_heading{
     font-weight: bold;
+    font-size: 15px;
     color: yellow;
 }

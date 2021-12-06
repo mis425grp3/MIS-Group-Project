@@ -21,5 +21,60 @@
         </nav>
     </header>
     <!--Nav bar ends here-->
+    <main>
+        <form id="orderForm" action="submit.php" method="POST">
+          <section>
+              <header>
+                  <h2>Specialty Pizzas</h2>
+              </header>
+                  <p>
+                      <label for= "specialtyPizza">Specialty Pizza:</label>
+                      <select name="specialityPizza" id="specialityPizza">
+                          <option></option>
+                          <option>Buffalo Chicken Pizza</option>
+                          <option>Baked Ziti Pizza</option>
+                          <option>Meat Lover's Pizza</option>
+                          <option>Chicken Parmesean Pizza</option>
+                      </select>
+                  </p>
+                  <p>
+                      <label for="Quantity">Quantity:</label>
+                      <input type="number" min="1" max="10" name="qty" id="qty">
+                  </p>
+            </section>
+            <section>
+                <header>
+                    <h2>Build Your Own!</h2>
+                </header>
+                <fieldset>
+                    <legend>Pick Your Sauce:</legend>
+                    <input type="radio" id="tSauce" name="sauce" value="tSauce"><label for="tSauce">Tomato Sauce</label>
+                    <input type="radio" id="bbqSauce" name="sauce" value="bbqSauce"><label for="bbqSauce">BBQSauce</label>
+                    <input type="radio" id="wSauce" name="sauce" value="wSauce"><label for="wSauce">White Sauce</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Pick Your Toppings:</legend>
+                    <input type="checkbox" id="pepperoni" name="topping" value="pepperoni"><label for="pepperoni">Pepperoni</label>
+                    <input type="checkbox" id="sausage" name="topping" value="sausage"><label for="sausage">Sausage</label>
+                    <input type="checkbox" id="meatballs" name="topping" value="meatballs"><label for="meatballs">Meatballs</label>
+                    <input type="checkbox" id="mushroom" name="topping" value="mushroom"><label for="mushroom">Mushroom</label>
+                    <input type="checkbox" id="spinach" name="topping" value="spinach"><label for="spinach">Spinach</label>
+                </fieldset>
+                <fieldset>
+                  <legend>Pick Your Toppers:</legend>
+                  <input type="checkbox" id="hotSauce" name="toppers" value="hotSauce"><label for="hotSauce">Hot Sauce Drizzle</label>
+                  <input type="checkbox" id="basil" name="toppers" value="basil"><label for="basil">Basil Leaves</label>
+                  <input type="checkbox" id="oregano" name="toppers" value="oregano"><label for="oregano">Oregano</label>
+            </section>
+            <p>
+              <label for="Quantity">Quantity:</label>
+              <input type="number" min="1" max="10" name="qty" id="qty">
+            </p>
+            <p>
+                <input type="submit" value="Add to Cart">
+                <input type="reset" value="Clear">
+            </p>
+        </form>
+    </main>
     </body>
 </html>
