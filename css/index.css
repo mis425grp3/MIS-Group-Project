@@ -26,13 +26,15 @@ main {
 
 .about{
   width: 50%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .container{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-column-gap: 50px
+  grid-column-gap: 15px
 }
 figure img{
   height: 100%;
@@ -42,3 +44,4 @@ figure img{
 article figcaption{
   text-align: center;
 }
+

@@ -1,0 +1,25 @@
+/*This contains the formatting for the footer that is displayed on all pages*/
+
+.footer {
+    background-color: #FFF1E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 30%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.footer p {
+    font-weight: bold;
+    font-size: 16px;
+    color: #2E2E44;
+    text-decoration: none;
+    font-family: 'Delius Unicase', cursive;
+}
