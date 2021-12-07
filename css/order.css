@@ -3,3 +3,7 @@ body {
     background: #313146;
     color: white;
 }
+
+main{
+  font-family: 'Roboto Slab', serif;
+}

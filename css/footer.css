@@ -13,6 +13,7 @@
 
 .footer-logo {
     width: 150px;
+    cursor: pointer;
 }
 
 .footer p {
