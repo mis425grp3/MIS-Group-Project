@@ -24,6 +24,8 @@ header.nav_header {
     padding: 2px 20%;
     position: sticky;
     top: 0px;
+    /*Prevent page items from overlapping the nav bar*/
+    z-index: 5;
 }
 
 .logo {

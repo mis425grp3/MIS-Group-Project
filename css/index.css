@@ -6,81 +6,90 @@ body {
 
 /*This was cleared out since the nav-bar related stuff was moved to navbar.css, sorry*/
 
-.mini_heading{
+.mini_heading {
     font-weight: bold;
     font-size: 20px;
     color: yellow;
 }
 
-.hrs li{
-  color:white;
-  font-family: 'Roboto Slab', serif;
-  font-weight: normal;
-  text-transform: none;
-  
+.hrs li {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    text-transform: none;
+
 }
 
 main {
-  font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif;
 }
 
-.about{
-  width: 50%;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
+.about {
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.container1{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
-  margin-left: auto;
-  margin-right: auto;
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.container2{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
 }
 
-.about h2{
-  color: yellow
-}
-h1{
-  font-size: 40px;
-  color: #f7766d;
-  padding-left: 15px;
-}
-figure img{
-  height: 100%;
-  width: 100%;
+.about h2 {
+    color: yellow
 }
 
-figure{
-  border: 5px solid bisque;
+h1 {
+    font-size: 40px;
+    color: #f7766d;
+    text-align: center;
+    vertical-align: middle;
 }
 
-article figcaption{
-  text-align: center;
-  padding: 10px;
+figure img {
+    height: 100%;
+    width: 100%;
 }
 
-@media only screen and (max-width: 700px){
-  .container1{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
-  margin-left: auto;
-  margin-right: auto;
+figure {
+    border: 5px solid bisque;
 }
+
+article figcaption {
+    text-align: center;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+    .container1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Removes the crusty edges from the images*/
+.rounded {
+    clip-path: circle(32%);
+    z-index: -500;
 }
