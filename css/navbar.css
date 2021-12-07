@@ -32,13 +32,13 @@ header.nav_header {
 
 nav ul {
     list-style: none;
-    width: 200%;
-    padding-left: 30%;
-
+    width: 100%;
+    padding-left: 40%;
 }
 
 nav ul li {
     display: inline-block;
+    width: 100px;
     padding: 0px 4em;
 }
 
