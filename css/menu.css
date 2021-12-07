@@ -77,18 +77,33 @@ li.BYO {
     float: left;
     width: 25%;
     height: 280px;
+    color:yellow;
+}
+
+#left ul li{
+  color: white;
 }
 
 #middle {
     float: left;
     width: 25%;
     height: 280px;
+    color:yellow;
+}
+
+#middle ul li{
+  color: white;
 }
 
 #right {
     float: left;
     width: 25%;
     height: 280px;
+    color: yellow;
+}
+
+#right ul li {
+    color: white;
 }
 
 figure img {

@@ -8,6 +8,18 @@ body {
 
 .mini_heading{
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     color: yellow;
+}
+
+.hrs li{
+  color:white;
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
+  text-transform: none;
+  
+}
+
+main {
+  font-family: 'Roboto Slab', serif;
 }
