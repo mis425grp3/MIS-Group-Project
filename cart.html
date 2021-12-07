@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Order</title>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+    <!--Nav bar begins here-->
+    <header class="nav_header">
+        <!--Had to do funky stuff here with the doc loc ref because an a-tag as the parent screws width up-->
+        <img src="images/banner.png" alt="logo" class="logo" onclick="document.location.href='index.html'">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Nav bar ends here-->
+    <div id="content">
+        <div class="border-box" id="border-box-right"></div>
+        <div class="border-box" id="border-box-left"></div>
+        <div id="content-box">
+            <div id="heading-logo">
+                <img src="./images/circle_cutout.png" width="200px">
+            </div>
+            <div id="heading">
+                <h1>Shopping Cart</h1>
+            </div>
+            <div id="sub-heading">
+                <h3>Papa Giuseppe is ready to start cooking</h3>
+            </div>
+            <div id="cart-table-container">
+                <table id="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Name</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Sum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-img">
+                                    <div class="img-prdct">
+                                        <img src="./images/mlPizza.png" width="100px">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Pizza w/Black Stuff On It</p>
+                            </td>
+                            <td>
+                                <div class="button-container">
+                                    <button class="cart-qty-plus" type="button" value="+">+</button>
+                                    <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                    <button class="cart-qty-minus" type="button" value="-">-</button>
+                                </div>
+                            </td>
+                            <td>$ <span id="price" class="price">0.00</span></td>
+                            <td>$ <span id="sum" class="sum">0.00</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-img">
+                                    <div class="img-prdct">
+                                        <img src="./images/cpPizza.png" width="100px">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Pizza That Looks Pretty Normal</p>
+                            </td>
+                            <td>
+                                <div class="button-container">
+                                    <button class="cart-qty-plus" type="button" value="+">+</button>
+                                    <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                    <button class="cart-qty-minus" type="button" value="-">-</button>
+                                </div>
+                            </td>
+                            <td>$ <span id="price" class="price">0.00</span></td>
+                            <td>$ <span id="sum" class="sum">0.00</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td>
+                                <strong>TOTAL: $<span id="cart-total">0.00</span>
+                                </strong>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

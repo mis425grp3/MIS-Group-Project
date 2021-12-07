@@ -1,0 +1,79 @@
+body {
+    background: white;
+}
+
+#content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-box {
+    background-color: #2E2E44;
+    /*Put the borders behind the nav-bar*/
+    z-index: -1;
+}
+
+#border-box-left {
+    position: fixed;
+    left: 0;
+    right: 76.5%;
+    top: 0px;
+    bottom: 0px;
+}
+
+#border-box-right {
+    position: fixed;
+    left: 76.5%;
+    right: 0%;
+    top: 0px;
+    bottom: 0px;
+}
+
+#heading-logo {
+    margin-top: 10px;
+}
+
+#heading h1 {
+    font-family: 'Roboto Slab', serif;
+    color: #CE5757;
+    font-weight: bold;
+}
+
+#sub-heading {
+    margin-top: -30px;
+    font-style: italic;
+}
+
+
+#cart-table {
+    border-collapse: collapse;
+    color: #2E2E44;
+    font-weight: bold;
+    margin: 25px 0;
+    font-size: 1.5em;
+    min-width: 1000px;
+}
+
+#cart-table thead tr{
+    background-color: #CE5757;
+    border-bottom:10px solid white;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+
+#cart-table tbody tr {
+    border-bottom: 10px solid white;
+}
+
+#cart-table tr {
+    background-color: #FFF1E6;
+    text-align: left;
+}
+
+#cart-table td {
+    padding: 12px 15px;
+}
