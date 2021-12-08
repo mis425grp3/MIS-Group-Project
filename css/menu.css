@@ -59,11 +59,11 @@ p.specality {
 }
 
 .container article{
-  border: 15px solid bisque;
+  border: 5px solid bisque;
 }
 
 .container p{
-  padding-left: 15px;
+  margin-left: 15px;
   font-weight: bold;
   font-size: 25px;
 }
@@ -161,6 +161,7 @@ li.BYO {
   font-size: 20px;
 }
 */
+
 .container2 div ul li{
   color:white;
   font-family: 'Roboto Slab', serif;
