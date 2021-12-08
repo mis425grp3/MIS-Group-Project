@@ -56,13 +56,12 @@ body {
     min-width: 1000px;
 }
 
-#cart-table thead tr{
+#cart-table thead tr {
     background-color: #CE5757;
-    border-bottom:10px solid white;
+    border-bottom: 10px solid white;
     text-align: left;
     font-weight: bold;
 }
-
 
 
 #cart-table tbody tr {

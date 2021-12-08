@@ -5,8 +5,8 @@ body {
     color: white;
 }
 
-main{
-  font-family: 'Roboto Slab', serif;
+main {
+    font-family: 'Roboto Slab', serif;
 }
 
 header h2 {
@@ -43,37 +43,39 @@ p.specality {
     line-height: 1.3em;
 }
 */
-#mini_desc{
-  padding-left: 15px;
-  font-style: italic; 
-  font-size: 20px;
-}
-.container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
-  margin-left: auto;
-  margin-right: auto;
+#mini_desc {
+    padding-left: 15px;
+    font-style: italic;
+    font-size: 20px;
 }
 
-.container article{
-  border: 5px solid bisque;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.container p{
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 25px;
+.container article {
+    border: 5px solid bisque;
 }
 
-figure img{
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.container p {
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 25px;
 }
+
+figure img {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 figcaption {
     width: 100%;
     font-size: 18px;
@@ -162,48 +164,48 @@ li.BYO {
 }
 */
 
-.container2 div ul li{
-  color:white;
-  font-family: 'Roboto Slab', serif;
-  font-weight: normal;
-  text-transform: none;
-  font-size: 20px;
+.container2 div ul li {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 20px;
 }
 
-.container2{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 15px;
-  padding-left: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
-.container2 div h3{
-  color: yellow;
+.container2 div h3 {
+    color: yellow;
 }
 
-#byo_fig{
-  width: 25%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+#byo_fig {
+    width: 25%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media only screen and (max-width: 700px){
-  .container{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  }
+@media only screen and (max-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .hovercss {
-  background-color: #f7766d;
-  color: black;
+    background-color: #f7766d;
+    color: black;
 }
