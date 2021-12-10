@@ -193,7 +193,7 @@ li.BYO {
     margin-right: auto;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 850px) {
     .container {
         display: grid;
         grid-template-columns: 1fr;

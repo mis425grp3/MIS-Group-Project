@@ -25,18 +25,23 @@
 <main>
     <div class="container">
         <form id="orderForm" action="submit.php" method="POST">
-            <section>
+            <section id="container1">
                 <header>
                     <h2>Specialty Pizzas</h2>
+                    <h3>All Specialty Pizzas are $12.75</h3>
                 </header>
+                <figure>
+                        <img src="images/blankPizza.png">
+                      </figure>
                 <p>
                     <label for="specialtyPizza">Specialty Pizza:</label>
                     <select name="specialtyPizza" id="specialtyPizza">
                         <option></option>
-                        <option>Buffalo Chicken Pizza ... $10.45</option>
-                        <option>Baked Ziti Pizza ... $10.45</option>
-                        <option>Meat Lover's Pizza ... $12.75</option>
-                        <option>Chicken Parmesan Pizza ... $12.75</option>
+                        <option>
+                          Buffalo Chicken Pizza</option>
+                        <option>Baked Ziti Pizza</option>
+                        <option>Meat Lover's Pizza</option>
+                        <option>Chicken Parmesan Pizza</option>
                     </select>
                 </p>
                 <p>
@@ -47,45 +52,87 @@
             <section>
                 <header>
                     <h2>Build Your Own!</h2>
-                    <h3>Pick any toppings for only $13.75!</h3>
+                    <h3>Pick one sauce and any toppings or toppers for only $13.75!</h3>
+                    <p id="quantity">
+                      <label for="qty_custom">Quantity:</label>
+                      <input type="number" min="1" max="10" name="qty_custom" id="qty_custom">
+                    </p>
                 </header>
-                <fieldset>
-                    <legend>Pick Your Sauce:</legend>
-                    <input type="radio" id="tSauce" name="sauce" value="tSauce"><label for="tSauce">Tomato Sauce</label>
-                    <input type="radio" id="bbqSauce" name="sauce" value="bbqSauce"><label for="bbqSauce">BBQSauce</label>
-                    <input type="radio" id="wSauce" name="sauce" value="wSauce"><label for="wSauce">White Sauce</label>
-                </fieldset>
-                <fieldset>
-                    <legend>Pick Your Toppings:</legend>
-                    <input type="checkbox" id="pepperoni" name="topping" value="pepperoni"><label
-                        for="pepperoni">Pepperoni</label>
-                    <input type="checkbox" id="sausage" name="topping" value="sausage"><label for="sausage">Sausage</label>
-                    <input type="checkbox" id="meatballs" name="topping" value="meatballs"><label
-                        for="meatballs">Meatballs</label>
-                    <input type="checkbox" id="mushroom" name="topping" value="mushroom"><label
-                        for="mushroom">Mushroom</label>
-                    <input type="checkbox" id="spinach" name="topping" value="spinach"><label for="spinach">Spinach</label>
-                </fieldset>
-                <fieldset>
-                    <legend>Pick Your Toppers:</legend>
-                    <input type="checkbox" id="hotSauce" name="toppers" value="hotSauce"><label for="hotSauce">Hot Sauce
-                    Drizzle</label>
-                    <input type="checkbox" id="basil" name="toppers" value="basil"><label for="basil">Basil Leaves</label>
-                    <input type="checkbox" id="oregano" name="toppers" value="oregano"><label for="oregano">Oregano</label>
-                </fieldset>
-            </section>
-            <p>
-                <label for="qty_custom">Quantity:</label>
-                <input type="number" min="1" max="10" name="qty_custom" id="qty_custom">
+                <section id="container2">
 
-            </p>
-            <p>
-                <input type="submit" value="Add to Cart">
-                <input type="reset" value="Clear">
-            </p>
+                    <fieldset>
+                        <legend>Pick Your Sauce:</legend>
+                        <figure>
+                          <img src="images/tomatoSauce.png">
+                        </figure>
+                        <input type="radio" id="tSauce" name="sauce" value="tSauce"><label for="tSauce">Tomato Sauce</label>
+                        <figure>
+                          <img src="images/bbqSauce.png">
+                        </figure>
+                        <input type="radio" id="bbqSauce" name="sauce" value="bbqSauce"><label for="bbqSauce">BBQ Sauce</label>
+                        <figure>
+                          <img src ="images/whiteSauce.png">
+                        </figure>
+                        <input type="radio" id="wSauce" name="sauce" value="wSauce"><label for="wSauce">White Sauce</label>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend>Pick Your Toppings:</legend>
+                        <figure>
+                          <img src ="images/pepperoniTopping.png">
+                        </figure>
+                        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+                        <label
+                          for="pepperoni">Pepperoni</label>
+                        <figure>
+                          <img src = "images/sausageTopping.png">
+                        </figure>
+                        <input type="checkbox" id="sausage" name="topping" value="sausage"><label for="sausage">Sausage</label>
+                        <figure>
+                          <img src = "images/meatballTopping.png">
+                        </figure>
+                        <input type="checkbox" id="meatballs" name="topping" value="meatballs"><label
+                            for="meatballs">Meatballs</label>
+                        <figure>
+                          <img src = "images/mushroomTopping.png">
+                        </figure>
+                        <input type="checkbox" id="mushroom" name="topping" value="mushroom"><label
+                            for="mushroom">Mushroom</label>
+                        <figure>
+                          <img src = "images/spinachTopping.png">
+                        </figure>
+                        <input type="checkbox" id="spinach" name="topping" value="spinach"><label for="spinach">Spinach</label>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend>Pick Your Toppers:</legend>
+                        <figure>
+                          <img src = "images/hotTopper.png">
+                        </figure>
+                        <input type="checkbox" id="hotSauce" name="toppers" value="hotSauce"><label for="hotSauce">Hot Sauce
+                        Drizzle</label>
+                        <figure>
+                          <img src = "images/basilTopper.png">
+                        </figure>
+                        <input type="checkbox" id="basil" name="toppers" value="basil"><label for="basil">Basil Leaves</label>
+                        <figure>
+                          <img src = "images/oreganoTopper.png">
+                        </figure>
+                        <input type="checkbox" id="oregano" name="toppers" value="oregano"><label for="oregano">Oregano</label>
+                    </fieldset>
+
+                </section>
+            </section>
+            <section id="buttons">
+              <input type="submit" value="Add to Cart" id="add_to_cart">
+              <input type="reset" value="Clear" id="reset">
+            </section>
         </form>
     </div>
 </main>
+<script src="js/app.js"></script>
 <footer class="footer">
     <img src="images/logo_no_text.png" alt="logo" class="footer-logo" onclick="document.location.href='index.html'">
     <p>Copyright © 2022 Papa Giuseppe's Italian Saloon. All Rights Reserved</p>
