@@ -1,18 +1,20 @@
 // Handle the sessionStorage
 let cartObj = undefined;
 while (cartObj == undefined) {
-    cartObj = sessionStorage.getItem('papaGStorage')
+    cartObj = sessionStorage.getItem('papaGCart');
     if (cartObj == undefined) {
+        console.log("New browser session, creating cart parent object")
         // The cartObj didn't exist, must be a new instance - create a new parent obj
         let papaGCart = {
             "objId": '5246673658',
             "contentArray": []
         }
         // Send the parent obj to the sessionStorage and attempt to retrieve it again
-        sessionStorage.setItem('papaGCart', papaGCart)
-        cartObj = sessionStorage.getItem('papaGStorage')
+        sessionStorage.setItem('papaGCart', JSON.stringify(papaGCart));
+        cartObj = sessionStorage.getItem('papaGCart');
     }
 }
+
 
 // Handle the submit button functionality
 let addToCartFormNode = document.getElementById('orderForm');
@@ -49,6 +51,9 @@ addToCartFormNode.addEventListener('submit', function(e) {
 
     // TODO: Data Validation
     let submissionType = 'specialty';
+    // if (formSpecialtyPizza != undefined || formSpecialtyPizzaQty != undefined) {
+    //
+    // }
 
     // Create the object to be passed to sessionStorage
     let cartAddObj = undefined;
@@ -69,7 +74,19 @@ addToCartFormNode.addEventListener('submit', function(e) {
             topperArray: formCustomTopperArray
         }
     }
-    console.log(cartAddObj)
+    // Get the current cart contentArray from sessionStorage
+    cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
+    // Append the new cart item into the contentArray
+    cartObj.contentArray.push(cartAddObj)
+    // Update the value of the cartObj in the sessionStorage
+    sessionStorage.setItem('papaGCart', JSON.stringify(cartObj));
+
+
+    // POST SET TEST
+    console.log("Operation complete, attempting to load data")
+    // Get the current cart contentArray from sessionStorage
+    cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
+    console.log(cartObj)
 })
 
 
