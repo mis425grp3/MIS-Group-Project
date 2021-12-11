@@ -161,3 +161,18 @@ addToCartButtonNode.addEventListener('click', function(e) {
     sessionStorage.setItem('papaGCart', JSON.stringify(papaGCart));
     alert("The cart has been reset.")
 })
+
+// Handle the checkout button
+let addToCartButtonNode = document.getElementById('checkout');
+addToCartButtonNode.addEventListener('click', function(e) {
+    // Make sure something is in the cart before sending them to the checkout
+    const cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
+    if (cartObj === null || cartObj === undefined) {
+        alert("The shopping cart is empty, please add an item")
+    } else if (cartObj.contentArray.length === 0) {
+        alert("The shopping cart is empty, please add an item")
+    } else {
+        // Send them to the cart
+        window.location.replace("/cart.html");
+    }
+})
