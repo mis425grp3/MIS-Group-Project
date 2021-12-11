@@ -17,6 +17,25 @@ function initSession() {
     }
 }
 
+
+function resetForm() {
+    // This is a bad way to do this but we ran out of time and default reset methods failed
+    document.getElementById("specialtyPizza").value = "";
+    document.getElementById("qty").value = "";
+    document.getElementById("tSauce").checked = false;
+    document.getElementById("bSauce").checked = false;;
+    document.getElementById("wSauce").checked = false;;
+    document.getElementById('pepperoni').checked = false;
+    document.getElementById('sausage').checked = false;
+    document.getElementById('meatballs').checked = false;
+    document.getElementById('mushroom').checked = false;
+    document.getElementById('spinach').checked = false;
+    document.getElementById('hotSauce').checked = false;
+    document.getElementById('basil').checked = false;
+    document.getElementById('oregano').checked = false;
+    document.getElementById('qty_custom').value = "";
+}
+
 initSession()
 
 // Handle the submit button functionality
@@ -159,6 +178,8 @@ addToCartFormNode.addEventListener('submit', function (e) {
     cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
     console.log(cartObj)
     alert("The item(s) have been added to your cart successfully.")
+    // Reset everything in the form (Default reset methods failed for some reason)
+    resetForm()
 })
 
 // Handle the empty cart button
@@ -186,27 +207,4 @@ checkoutButtonNode.addEventListener('click', function (e) {
         // Send them to the cart
         window.location.replace("/cart.html");
     }
-})
-
-document.getElementById('add_to_cart').addEventListener('submit',function(e){
-  e.preventDefault();
-  const spPizza = document.querySelector('#specialtyPizza');
-  const sp_qty = document.querySelector('#qty');
-  const byo_qty = document.querySelector('#qty_custom');
-  const tsauce = document.querySelector('#tSauce');
-  const bsauce = document.querySelector('#bSauce');
-  const wsauce = document.querySelector('#wSauce');
-  const pepperoni = document.querySelector('#pepperoni');
-  const sausage = document.querySelector('#sausage');
-  const meatballs = document.querySelector('#meatballs');
-  const mushroom = document.querySelector('#mushroom');
-  const spinach = document.querySelector('#spinach');
-  const hotsauce = document.querySelector('#hotSauce');
-  const basil = document.querySelector('#basil');
-  const oregano = document.querySelector('#oregano');
-
-  const all = [spPizza,sp_qty,byo_qty,tsauce,bsauce,wsauce,pepperoni,sausage,meatballs,mushroom,spinach,hotsauce,basil,oregano]
-  for(let x of all){
-    x.innerHTML = "";
-  }
 })
