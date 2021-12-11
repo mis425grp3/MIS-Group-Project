@@ -187,3 +187,4 @@ checkoutButtonNode.addEventListener('click', function (e) {
         window.location.replace("/cart.html");
     }
 })
+
