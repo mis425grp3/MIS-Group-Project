@@ -51,7 +51,7 @@ for (const listItem of cartContentsObjArray) {
             if (toppingItem === true) {
                 toppingString += topperDict[index] + ', '
             }
-        toppingString = toppingString.substring(0 ,toppingString.length -1);
+        toppingString = toppingString.substring(0 ,toppingString.length -2);
         listItemToppings = toppingString;
         listItemQty = listItem['itemQty'];
         listItemPrice = "13.75"
