@@ -64,13 +64,9 @@ for (const listItem of cartContentsObjArray) {
         "                    <td>\n" +
         "                        <p>" + listItemToppings + "</p>\n" +
         "                    </td>\n" +
-        "                    <td>\n" +
-        "                        <div class=\"button-container\">\n" +
-        "                            <td>$ <span id=\"quantity\" class=\"qty\">"+listItemQty+"</span></td>\n" +
-        "                        </div>\n" +
-        "                    </td>\n" +
-        "                    <td>$ <span id=\"price3\" class=\"price\">"+listItemPrice+"</span></td>\n" +
-        "                    <td>$ <span id=\"sum3\" class=\"sum\">"+listItemSum+"</span></td>\n" +
+        "                    <td>$ <span id=\"quantity\" class=\"qty\">"+listItemQty+"</span></td>\n" +
+        "                    <td>$ <span id=\"price\" class=\"price\">"+listItemPrice+"</span></td>\n" +
+        "                    <td>$ <span id=\"sum\" class=\"sum\">"+listItemSum+"</span></td>\n" +
         "                </tr>"
     console.log("Inserted row?")
 }
