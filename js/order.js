@@ -128,6 +128,9 @@ addToCartFormNode.addEventListener('submit', function (e) {
                 } else {
                     formCustomSauceSelection = "White Sauce";
                 }
+            } else {
+                console.log("Invalid sauce type??")
+                console.log(sauceType)
             }
         }
 

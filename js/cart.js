@@ -25,6 +25,7 @@ for (const listItem in cartContentsObjArray) {
 
     let newRow = table.insertRow(table.rows.length)
     // This is a HIDEOUS solution to a simple problem but we ran out of time and it works
+    //finally code i can relate to
     newRow.innerHTML = "<tr>\n" +
         "                    <td>\n" +
         "                        <div class=\"product-img\">\n" +
