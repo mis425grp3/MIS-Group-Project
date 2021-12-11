@@ -12,7 +12,7 @@ function getSessionStorageData() {
 }
 
 const cartContentsObjArray = getSessionStorageData();
-let table = document.getElementById('cart-table');
+let table = document.getElementById('cart-table').getElementsByTagName('tbody')[0];
 
 for (const listItem of cartContentsObjArray) {
     // Initialize shared variables
