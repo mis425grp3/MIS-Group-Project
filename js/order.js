@@ -207,6 +207,6 @@ document.getElementById('add_to_cart').addEventListener('submit',function(e){
 
   const all = [spPizza,sp_qty,byo_qty,tsauce,bsauce,wsauce,pepperoni,sausage,meatballs,mushroom,spinach,hotsauce,basil,oregano]
   for(let x of all){
-    x.value = "";
+    x.innerHTML = "";
   }
 })

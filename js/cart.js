@@ -71,7 +71,7 @@ for (const listItem of cartContentsObjArray) {
         listItemSum = (13.75 * parseInt(listItemQty)).toFixed(2)
     }
 
-    // Add the listItemSum to the order total 
+    // Add the listItemSum to the order total
     orderTotal += (13.75 * parseInt(listItemQty))
 
     let newRow = table.insertRow(table.rows.length);
@@ -94,14 +94,23 @@ for (const listItem of cartContentsObjArray) {
         "                    <td>$ <span id=\"price\" class=\"price\">" + listItemPrice + "</span></td>\n" +
         "                    <td>$ <span id=\"sum\" class=\"sum\">" + listItemSum + "</span></td>\n" +
         "                </tr>"
-
-    // Populate the table footer
-    let newFootRow = tableFooter.insertRow(0);
-    newFootRow.innerHTML = "                <tr>\n" +
-        "                    <td colspan=\"5\"></td>\n" +
-        "                    <td>\n" +
-        "                        <strong>TOTAL: $<span id=\"cart-total\">" + orderTotal.toFixed(2) + "</span>\n" +
-        "                        </strong>\n" +
-        "                    </td>\n" +
-        "                </tr>"
 }
+
+// Populate the table footer
+let newFootRow = tableFooter.insertRow(0);
+newFootRow.innerHTML = "                <tr>\n" +
+    "                    <td colspan=\"5\"></td>\n" +
+    "                    <td>\n" +
+    "                        <strong>TOTAL: $<span id=\"cart-total\">" + orderTotal.toFixed(2) + "</span>\n" +
+    "                        </strong>\n" +
+    "                    </td>\n" +
+    "                </tr>"
+
+
+// Clear the user's localStorage - the order was processed
+let papaGCart = {
+"objId": '5246673658',
+"contentArray": []
+}
+// Send the parent obj to the sessionStorage and attempt to retrieve it again
+sessionStorage.setItem('papaGCart', JSON.stringify(papaGCart));
