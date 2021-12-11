@@ -151,8 +151,8 @@ addToCartFormNode.addEventListener('submit', function(e) {
 })
 
 // Handle the empty cart button
-let addToCartButtonNode = document.getElementById('empty_cart');
-addToCartButtonNode.addEventListener('click', function(e) {
+let emptyCartButtonNode = document.getElementById('empty_cart');
+emptyCartButtonNode.addEventListener('click', function(e) {
     // Reset the papaGCart object in the sessionStorage to it's default state
     let papaGCart = {
         "objId": '5246673658',
@@ -163,8 +163,8 @@ addToCartButtonNode.addEventListener('click', function(e) {
 })
 
 // Handle the checkout button
-let addToCartButtonNode = document.getElementById('checkout');
-addToCartButtonNode.addEventListener('click', function(e) {
+let checkoutButtonNode = document.getElementById('checkout');
+checkoutButtonNode.addEventListener('click', function(e) {
     // Make sure something is in the cart before sending them to the checkout
     const cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
     if (cartObj === null || cartObj === undefined) {
