@@ -22,11 +22,13 @@ for (const listItem in cartContentsObjArray) {
     let listItemQty;
     let listItemPrice;
     let listItemSum;
+    console.log("Attempting to render page")
+    console.log(listItem)
     // Get the cart item details
     if (listItem.itemType == 'specialty') {
-        listItemName = listItem.pizzaType;
+        listItemName = listItem['pizzaType'];
         listItemToppings = "N/A - Specialty Pizza"
-        listItemQty = listItem.itemQty;
+        listItemQty = listItem['itemQty'];
         listItemPrice = "12.75"
         listItemSum = (12.75*parseInt(listItemQty)).toString()
     } else {
