@@ -1,21 +1,25 @@
-// Handle the sessionStorage
-let cartObj = undefined;
-while (
-    cartObj === undefined) {
-    cartObj = sessionStorage.getItem('papaGCart');
-    if (cartObj === undefined) {
-        console.log("New browser session, creating cart parent object")
-        // The cartObj didn't exist, must be a new instance - create a new parent obj
-        let papaGCart = {
-            "objId": '5246673658',
-            "contentArray": []
-        }
-        // Send the parent obj to the sessionStorage and attempt to retrieve it again
-        sessionStorage.setItem('papaGCart', JSON.stringify(papaGCart));
+function initSession() {
+    // Handle the sessionStorage
+    let cartObj = undefined;
+    while (
+        cartObj === undefined) {
         cartObj = sessionStorage.getItem('papaGCart');
+        if (cartObj === undefined) {
+            console.log("New browser session, creating cart parent object")
+            // The cartObj didn't exist, must be a new instance - create a new parent obj
+            let papaGCart = {
+                "objId": '5246673658',
+                "contentArray": []
+            }
+            // Send the parent obj to the sessionStorage and attempt to retrieve it again
+            sessionStorage.setItem('papaGCart', JSON.stringify(papaGCart));
+            cartObj = sessionStorage.getItem('papaGCart');
+        }
     }
 }
 
+initSession()
+console.log("Session was initalized")
 
 // Handle the submit button functionality
 let addToCartFormNode = document.getElementById('orderForm');
@@ -119,6 +123,7 @@ addToCartFormNode.addEventListener('submit', function(e) {
             topperArray: formCustomTopperArray
         }
     }
+    initSession()
     // Get the current cart contentArray from sessionStorage
     cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
     // Append the new cart item into the contentArray
