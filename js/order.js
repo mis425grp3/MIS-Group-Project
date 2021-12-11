@@ -188,4 +188,7 @@ checkoutButtonNode.addEventListener('click', function (e) {
     }
 })
 
-document.getElementById('add_to_cart').addEventListener('submit')
+document.getElementById('add_to_cart').addEventListener('submit',function(e){
+  e.preventDefault();
+  const spPizza = document.querySelector('')
+})
