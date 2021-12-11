@@ -118,6 +118,7 @@ addToCartFormNode.addEventListener('submit', function (e) {
     } else if (submissionType === 'custom') {
         // This is a custom pizza, figure out which sauce was selected
         for (const [index, sauceType] in formCustomSauceArray.entries()) {
+            console.log(sauceType)
             if (sauceType == true) {
                 // This is the selected sauce - should've used an obj here instead of an array whoops (out of time)
                 if (index == 0) {
@@ -129,7 +130,7 @@ addToCartFormNode.addEventListener('submit', function (e) {
                 }
             }
         }
-        
+
         cartAddObj = {
             itemType: submissionType,
             itemQty: formCustomPizzaQty,
