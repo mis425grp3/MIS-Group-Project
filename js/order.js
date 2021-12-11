@@ -109,6 +109,7 @@ addToCartFormNode.addEventListener('submit', function (e) {
     // Create the object to be passed to sessionStorage
     let cartAddObj = undefined;
     if (submissionType === 'specialty') {
+        console.log("Spec. submissionType")
         // This is a specialty pizza
         cartAddObj = {
             itemType: submissionType,
@@ -117,6 +118,7 @@ addToCartFormNode.addEventListener('submit', function (e) {
         }
     } else if (submissionType === 'custom') {
         // This is a custom pizza, figure out which sauce was selected
+        console.log("Custom submissionType")
         for (const [index, sauceType] in formCustomSauceArray.entries()) {
             console.log(sauceType)
             if (sauceType == true) {
@@ -133,7 +135,7 @@ addToCartFormNode.addEventListener('submit', function (e) {
                 console.log(sauceType)
             }
         }
-
+        console.log("Passed for loop")
         cartAddObj = {
             itemType: submissionType,
             itemQty: formCustomPizzaQty,
