@@ -21,7 +21,7 @@ initSession()
 
 // Handle the submit button functionality
 let addToCartFormNode = document.getElementById('orderForm');
-addToCartFormNode.addEventListener('submit', function(e) {
+addToCartFormNode.addEventListener('submit', function (e) {
     e.preventDefault()
     console.log("Add to cart button was pressed by the user")
     // Get user input on specialty pizza selections
@@ -116,7 +116,20 @@ addToCartFormNode.addEventListener('submit', function(e) {
             pizzaType: formSpecialtyPizza
         }
     } else if (submissionType === 'custom') {
-        // This is a custom pizza
+        // This is a custom pizza, figure out which sauce was selected
+        for (const [index, sauceType] in formCustomSauceArray.entries()) {
+            if (sauceType == true) {
+                // This is the selected sauce - should've used an obj here instead of an array whoops (out of time)
+                if (index == 0) {
+                    formCustomSauceSelection = "Tomato Sauce";
+                } else if (index == 1) {
+                    formCustomSauceSelection = "BBQ Sauce";
+                } else {
+                    formCustomSauceSelection = "White Sauce";
+                }
+            }
+        }
+        
         cartAddObj = {
             itemType: submissionType,
             itemQty: formCustomPizzaQty,
@@ -141,7 +154,6 @@ addToCartFormNode.addEventListener('submit', function(e) {
     // Update the value of the cartObj in the sessionStorage
     sessionStorage.setItem('papaGCart', JSON.stringify(cartObj));
 
-
     // POST SET TEST
     console.log("Operation complete, attempting to load data")
     // Get the current cart contentArray from sessionStorage
@@ -152,7 +164,7 @@ addToCartFormNode.addEventListener('submit', function(e) {
 
 // Handle the empty cart button
 let emptyCartButtonNode = document.getElementById('empty_cart');
-emptyCartButtonNode.addEventListener('click', function(e) {
+emptyCartButtonNode.addEventListener('click', function (e) {
     // Reset the papaGCart object in the sessionStorage to it's default state
     let papaGCart = {
         "objId": '5246673658',
@@ -164,7 +176,7 @@ emptyCartButtonNode.addEventListener('click', function(e) {
 
 // Handle the checkout button
 let checkoutButtonNode = document.getElementById('checkout');
-checkoutButtonNode.addEventListener('click', function(e) {
+checkoutButtonNode.addEventListener('click', function (e) {
     // Make sure something is in the cart before sending them to the checkout
     const cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
     if (cartObj === null || cartObj === undefined) {
