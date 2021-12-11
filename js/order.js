@@ -190,5 +190,20 @@ checkoutButtonNode.addEventListener('click', function (e) {
 
 document.getElementById('add_to_cart').addEventListener('submit',function(e){
   e.preventDefault();
-  const spPizza = document.querySelector('')
+  const spPizza = document.querySelector('#specialtyPizza');
+  const sp_qty = document.querySelector('#qty');
+  const byo_qty = document.querySelector('#qty_custom');
+  const tsauce = document.querySelector('#tSauce');
+  const bsauce = document.querySelector('#bSauce');
+  const wsauce = document.querySelector('#wSauce');
+  const pepperoni = document.querySelector('#pepperoni');
+  const sausage = document.querySelector('#sausage');
+  const meatballs = document.querySelector('#meatballs');
+  const mushroom = document.querySelector('#mushroom');
+  const spinach = document.querySelector('#spinach');
+  const hotsauce = document.querySelector('#hotSauce');
+  const basil = document.querySelector('#basil');
+  const oregano = document.querySelector('#oregano');
+
+  const all = [spPizza,]
 })

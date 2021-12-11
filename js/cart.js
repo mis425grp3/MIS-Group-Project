@@ -13,6 +13,8 @@ function getSessionStorageData() {
 
 const cartContentsObjArray = getSessionStorageData();
 let table = document.getElementById('cart-table').getElementsByTagName('tbody')[0];
+let tableFooter = document.getElementById('cart-table').getElementsByTagName('tfoot')[0];
+let orderTotal = 0.00
 
 for (const listItem of cartContentsObjArray) {
     // Initialize shared variables
@@ -57,6 +59,11 @@ for (const listItem of cartContentsObjArray) {
             if (toppingItem === true) {
                 toppingString += topperDict[index] + ', '
             }
+        if (toppingString === "") {
+            // No toppings were selected
+            toppingString = "None Selected"
+        }
+
         toppingString = toppingString.substring(0, toppingString.length - 2);
         listItemToppings = toppingString;
         listItemQty = listItem['itemQty'];
@@ -64,15 +71,7 @@ for (const listItem of cartContentsObjArray) {
         listItemSum = (13.75 * parseInt(listItemQty)).toFixed(2)
     }
 
-    // let listItemProductImg = './images/blankPizza.png';
-    // let listItemName = 'A special pizza';
-    // let listItemToppings = 'Special toppings';
-    // let listItemQty = '0';
-    // let listItemPrice = '0.00';
-    // let listItemSum = '0.00';
-
-
-    let newRow = table.insertRow(table.rows.length)
+    let newRow = table.insertRow(table.rows.length);
     // This is a HIDEOUS solution to a simple problem but we ran out of time and it works
     newRow.innerHTML = "<tr>\n" +
         "                    <td>\n" +
@@ -91,5 +90,15 @@ for (const listItem of cartContentsObjArray) {
         "                    <td><span id=\"quantity\" class=\"qty\">" + listItemQty + "</span></td>\n" +
         "                    <td>$ <span id=\"price\" class=\"price\">" + listItemPrice + "</span></td>\n" +
         "                    <td>$ <span id=\"sum\" class=\"sum\">" + listItemSum + "</span></td>\n" +
+        "                </tr>"
+
+    // Populate the table footer     
+    let newFootRow = tableFooter.insertRow(0);
+    newFootRow.innerHTML = "                <tr>\n" +
+        "                    <td colspan=\"5\"></td>\n" +
+        "                    <td>\n" +
+        "                        <strong>TOTAL: $<span id=\"cart-total\">" + orderTotal.toFixed(2) + "</span>\n" +
+        "                        </strong>\n" +
+        "                    </td>\n" +
         "                </tr>"
 }
