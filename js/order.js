@@ -188,3 +188,4 @@ checkoutButtonNode.addEventListener('click', function (e) {
     }
 })
 
+document.getElementById('add_to_cart').addEventListener('submit')

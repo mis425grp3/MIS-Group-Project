@@ -36,7 +36,10 @@ for (const listItem of cartContentsObjArray) {
     // Get the cart item details
     if (listItem.itemType == 'specialty') {
         listItemName = listItem['pizzaType'];
+        console.log(listItemName);
         listItemProductImg = pizzaImageObj[listItem['pizzaType']];
+        console.log(pizzaImageObj[listItem['pizzaType']]);
+        console.log(listItemProductImg);
         listItemToppings = "N/A - Specialty Pizza"
         listItemQty = listItem['itemQty'];
         listItemPrice = "12.75"
