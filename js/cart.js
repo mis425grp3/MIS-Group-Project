@@ -71,6 +71,9 @@ for (const listItem of cartContentsObjArray) {
         listItemSum = (13.75 * parseInt(listItemQty)).toFixed(2)
     }
 
+    // Add the listItemSum to the order total 
+    orderTotal += (13.75 * parseInt(listItemQty))
+
     let newRow = table.insertRow(table.rows.length);
     // This is a HIDEOUS solution to a simple problem but we ran out of time and it works
     newRow.innerHTML = "<tr>\n" +
@@ -92,7 +95,7 @@ for (const listItem of cartContentsObjArray) {
         "                    <td>$ <span id=\"sum\" class=\"sum\">" + listItemSum + "</span></td>\n" +
         "                </tr>"
 
-    // Populate the table footer     
+    // Populate the table footer
     let newFootRow = tableFooter.insertRow(0);
     newFootRow.innerHTML = "                <tr>\n" +
         "                    <td colspan=\"5\"></td>\n" +
