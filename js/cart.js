@@ -1,5 +1,6 @@
 function getSessionStorageData() {
     const cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
+    console.log(cartObj)
     if (cartObj === null || cartObj === undefined) {
         // window.location.replace("/order.html");
         alert("The shopping cart is empty, redirecting...")
@@ -7,6 +8,8 @@ function getSessionStorageData() {
         // window.location.replace("/order.html");
         alert("The shopping cart is empty, redirecting...")
     } else {
+        console.log("Raw obj:")
+        console.log(cartObj)
         return cartObj.contentArray
     }
 }
