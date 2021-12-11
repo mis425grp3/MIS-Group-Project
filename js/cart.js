@@ -28,25 +28,25 @@ for (const listItem in cartContentsObjArray) {
         "                    <td>\n" +
         "                        <div class=\"product-img\">\n" +
         "                            <div class=\"img-prdct\">\n" +
-        "                                <img src={listItemProductImg} width=\"100px\">\n" +
+        "                                <img src=listItemProductImg width=\"100px\">\n" +
         "                            </div>\n" +
         "                        </div>\n" +
         "                    </td>\n" +
         "                    <td>\n" +
-        "                        <p>{listItemName}</p>\n" +
+        "                        <p>listItemName</p>\n" +
         "                    </td>\n" +
         "                    <td>\n" +
-        "                        <p>{listItemToppings}</p>\n" +
+        "                        <p>listItemToppings</p>\n" +
         "                    </td>\n" +
         "                    <td>\n" +
         "                        <div class=\"button-container\">\n" +
         "                            <button class=\"cart-qty-plus\" type=\"button\" value=\"+\">+</button>\n" +
-        "                            <input type=\"text\" name=\"qty\" min=\"0\" class=\"qty form-control\" value=\{listItemQty}/>\n" +
+        "                            <input type=\"text\" name=\"qty\" min=\"0\" class=\"qty form-control\" value=\listItemQty/>\n" +
         "                            <button class=\"cart-qty-minus\" type=\"button\" value=\"-\">-</button>\n" +
         "                        </div>\n" +
         "                    </td>\n" +
-        "                    <td>$ <span id=\"price3\" class=\"price\">{listItemPrice}</span></td>\n" +
-        "                    <td>$ <span id=\"sum3\" class=\"sum\">{listItemSum}</span></td>\n" +
+        "                    <td>$ <span id=\"price3\" class=\"price\">listItemPrice</span></td>\n" +
+        "                    <td>$ <span id=\"sum3\" class=\"sum\">listItemSum</span></td>\n" +
         "                </tr>"
     console.log("Inserted row?")
 }
