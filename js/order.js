@@ -110,7 +110,6 @@ addToCartFormNode.addEventListener('submit', function (e) {
     // Create the object to be passed to sessionStorage
     let cartAddObj = undefined;
     if (submissionType === 'specialty') {
-        console.log("Spec. submissionType")
         // This is a specialty pizza
         cartAddObj = {
             itemType: submissionType,
@@ -119,25 +118,18 @@ addToCartFormNode.addEventListener('submit', function (e) {
         }
     } else if (submissionType === 'custom') {
         // This is a custom pizza, figure out which sauce was selected
-        console.log("Custom submissionType")
-        console.log(formCustomSauceArray)
         for (const [index, sauceType] of formCustomSauceArray.entries()) {
-            console.log(sauceType)
-            if (sauceType == true) {
+            if (sauceType === true) {
                 // This is the selected sauce - should've used an obj here instead of an array whoops (out of time)
-                if (index == 0) {
+                if (index === 0) {
                     formCustomSauceSelection = "Tomato Sauce";
-                } else if (index == 1) {
+                } else if (index === 1) {
                     formCustomSauceSelection = "BBQ Sauce";
                 } else {
                     formCustomSauceSelection = "White Sauce";
                 }
-            } else {
-                console.log("Invalid sauce type??")
-                console.log(sauceType)
             }
         }
-        console.log("Passed for loop")
         cartAddObj = {
             itemType: submissionType,
             itemQty: formCustomPizzaQty,
@@ -152,7 +144,6 @@ addToCartFormNode.addEventListener('submit', function (e) {
     cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
     // Append the new cart item into the contentArray
     if (cartObj === null) {
-        console.log("Cart was null?")
         // The session must've failed to init on page load? Not sure why this happens
         initSession()
         cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));

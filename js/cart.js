@@ -15,17 +15,39 @@ const cartContentsObjArray = getSessionStorageData();
 let table = document.getElementById('cart-table');
 
 for (const listItem in cartContentsObjArray) {
-    // Get the cart item details
+    // Initialize shared variables
     let listItemProductImg = './images/blankPizza.png';
-    let listItemName = 'A special pizza';
-    let listItemToppings = 'Special toppings';
-    let listItemQty = '0';
-    let listItemPrice = '0.00';
-    let listItemSum = '0.00';
+    let listItemName;
+    let listItemToppings;
+    let listItemQty;
+    let listItemPrice;
+    let listItemSum;
+    // Get the cart item details
+    if (listItem.itemType == 'specialty') {
+        listItemName = listItem.pizzaType;
+        listItemToppings = "N/A - Specialty Pizza"
+        listItemQty = listItem.itemQty;
+        listItemPrice = "12.75"
+        listItemSum = (12.75*parseInt(listItemQty)).toString()
+    } else {
+        // Determine the name
+        listItemName = listItem.pizzaType;
+        listItemToppings = "N/A - Specialty Pizza"
+        listItemQty = listItem.itemQty;
+        listItemPrice = "12.75"
+        listItemSum = (12.75*parseInt(listItemQty)).toString()
+    }
+
+    // let listItemProductImg = './images/blankPizza.png';
+    // let listItemName = 'A special pizza';
+    // let listItemToppings = 'Special toppings';
+    // let listItemQty = '0';
+    // let listItemPrice = '0.00';
+    // let listItemSum = '0.00';
+
 
     let newRow = table.insertRow(table.rows.length)
     // This is a HIDEOUS solution to a simple problem but we ran out of time and it works
-    //finally code i can relate to
     newRow.innerHTML = "<tr>\n" +
         "                    <td>\n" +
         "                        <div class=\"product-img\">\n" +
