@@ -17,9 +17,13 @@ let table = document.getElementById('cart-table').getElementsByTagName('tbody')[
 for (const listItem of cartContentsObjArray) {
     // Initialize shared variables
     let pizzaImageObj = [
-        {"Buffalo Chicken Pizza": "images/blPizza.png",
-            "Meat Lover's Pizza":"images/mlPizza.png",
-            "Baked Ziti Pizza":"images/bzPizza.png","Chicken Parmesan Pizza":"images/cpPizza.png", "Build Your Own":"images/byoPizza.png"}
+        {
+            "Buffalo Chicken Pizza": "images/blPizza.png",
+            "Meat Lover's Pizza": "images/mlPizza.png",
+            "Baked Ziti Pizza": "images/bzPizza.png",
+            "Chicken Parmesan Pizza": "images/cpPizza.png",
+            "Build Your Own": "images/byoPizza.png"
+        }
     ]
     let listItemProductImg = './images/blankPizza.png';
     let listItemName;
@@ -32,11 +36,11 @@ for (const listItem of cartContentsObjArray) {
     // Get the cart item details
     if (listItem.itemType == 'specialty') {
         listItemName = listItem['pizzaType'];
-        listItemProductImg = pizzaImageObj[listItemName];
+        listItemProductImg = pizzaImageObj[listItem['pizzaType']];
         listItemToppings = "N/A - Specialty Pizza"
         listItemQty = listItem['itemQty'];
         listItemPrice = "12.75"
-        listItemSum = (12.75*parseInt(listItemQty)).toFixed(2)
+        listItemSum = (12.75 * parseInt(listItemQty)).toFixed(2)
     } else {
         // Determine the name
         listItemName = "Custom w/" + listItem['sauceType'];
@@ -52,11 +56,11 @@ for (const listItem of cartContentsObjArray) {
             if (toppingItem === true) {
                 toppingString += topperDict[index] + ', '
             }
-        toppingString = toppingString.substring(0 ,toppingString.length -2);
+        toppingString = toppingString.substring(0, toppingString.length - 2);
         listItemToppings = toppingString;
         listItemQty = listItem['itemQty'];
         listItemPrice = "13.75"
-        listItemSum = (13.75*parseInt(listItemQty)).toFixed(2)
+        listItemSum = (13.75 * parseInt(listItemQty)).toFixed(2)
     }
 
     // let listItemProductImg = './images/blankPizza.png';
@@ -73,7 +77,7 @@ for (const listItem of cartContentsObjArray) {
         "                    <td>\n" +
         "                        <div class=\"product-img\">\n" +
         "                            <div class=\"img-prdct\">\n" +
-        "                                <img src="+listItemProductImg+" width=\"100px\">\n" +
+        "                                <img src=" + listItemProductImg + " width=\"100px\">\n" +
         "                            </div>\n" +
         "                        </div>\n" +
         "                    </td>\n" +
@@ -83,9 +87,8 @@ for (const listItem of cartContentsObjArray) {
         "                    <td>\n" +
         "                        <p>" + listItemToppings + "</p>\n" +
         "                    </td>\n" +
-        "                    <td><span id=\"quantity\" class=\"qty\">"+listItemQty+"</span></td>\n" +
-        "                    <td>$ <span id=\"price\" class=\"price\">"+listItemPrice+"</span></td>\n" +
-        "                    <td>$ <span id=\"sum\" class=\"sum\">"+listItemSum+"</span></td>\n" +
+        "                    <td><span id=\"quantity\" class=\"qty\">" + listItemQty + "</span></td>\n" +
+        "                    <td>$ <span id=\"price\" class=\"price\">" + listItemPrice + "</span></td>\n" +
+        "                    <td>$ <span id=\"sum\" class=\"sum\">" + listItemSum + "</span></td>\n" +
         "                </tr>"
-    console.log("Inserted row?")
 }
