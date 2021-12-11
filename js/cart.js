@@ -16,6 +16,11 @@ let table = document.getElementById('cart-table').getElementsByTagName('tbody')[
 
 for (const listItem of cartContentsObjArray) {
     // Initialize shared variables
+    let pizzaImageObj = [
+        {"Buffalo Chicken Pizza": "images/blPizza.png",
+            "Meat Lover's Pizza":"images/mlPizza.png",
+            "Baked Ziti Pizza":"images/bzPizza.png","Chicken Parmesan Pizza":"images/cpPizza.png", "Build Your Own":"images/byoPizza.png"}
+    ]
     let listItemProductImg = './images/blankPizza.png';
     let listItemName;
     let listItemToppings;
@@ -83,9 +88,3 @@ for (const listItem of cartContentsObjArray) {
         "                </tr>"
     console.log("Inserted row?")
 }
-
-// let ??? = [
-//   {"Buffalo Chicken Pizza": "images/blPizza.png", 
-//   "Meat Lover's Pizza":"images/mlPizza.png",
-//   "Baked Ziti Pizza":"images/bzPizza.png","Chicken Parmesan Pizza":"images/cpPizza.png", "Build Your Own":"images/byoPizza.png"}
-// ]
