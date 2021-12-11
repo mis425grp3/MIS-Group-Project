@@ -121,7 +121,7 @@ addToCartFormNode.addEventListener('submit', function (e) {
         // This is a custom pizza, figure out which sauce was selected
         console.log("Custom submissionType")
         console.log(formCustomSauceArray)
-        for (const [index, sauceType] in formCustomSauceArray.entries()) {
+        for (const [index, sauceType] of formCustomSauceArray.entries()) {
             console.log(sauceType)
             if (sauceType == true) {
                 // This is the selected sauce - should've used an obj here instead of an array whoops (out of time)
