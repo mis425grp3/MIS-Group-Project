@@ -41,7 +41,7 @@ for (const listItem in cartContentsObjArray) {
         "                    <td>\n" +
         "                        <div class=\"button-container\">\n" +
         "                            <button class=\"cart-qty-plus\" type=\"button\" value=\"+\">+</button>\n" +
-        "                            <input type=\"text\" name=\"qty\" min=\"0\" class=\"qty form-control\" value=\"" + listItemQty + ">\n" +
+        "                            <input type=\"text\" name=\"qty\" min=\"0\" class=\"qty form-control\" value=\""+listItemQty+"\">+</button>\n" +
         "                            <button class=\"cart-qty-minus\" type=\"button\" value=\"-\">-</button>\n" +
         "                        </div>\n" +
         "                    </td>\n" +
