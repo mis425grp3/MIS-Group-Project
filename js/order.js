@@ -33,6 +33,7 @@ addToCartFormNode.addEventListener('submit', function (e) {
     let formCustomPizzaBSauceBool = document.getElementById("bSauce").checked;
     let formCustomPizzaWSauceBool = document.getElementById("wSauce").checked;
     const formCustomSauceArray = [formCustomPizzaTSauceBool, formCustomPizzaBSauceBool, formCustomPizzaWSauceBool];
+    console.log(formCustomSauceArray)
     let formCustomSauceSelection = "";
 
     // Get user input on topping selections
@@ -119,6 +120,7 @@ addToCartFormNode.addEventListener('submit', function (e) {
     } else if (submissionType === 'custom') {
         // This is a custom pizza, figure out which sauce was selected
         console.log("Custom submissionType")
+        console.log(formCustomSauceArray)
         for (const [index, sauceType] in formCustomSauceArray.entries()) {
             console.log(sauceType)
             if (sauceType == true) {
