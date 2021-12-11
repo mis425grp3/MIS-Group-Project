@@ -12,7 +12,7 @@ function getSessionStorageData() {
 }
 
 const cartContentsObjArray = getSessionStorageData();
-let table = document.getElementById('cart-table').getElementByTagname('tbody')[0];
+let table = document.getElementById('cart-table');
 
 for (const listItem in cartContentsObjArray) {
     // Get the cart item details
