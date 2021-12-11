@@ -18,14 +18,14 @@ main {
   font-size: 18px
 }
 
-fieldset{
+/*fieldset{
   display: grid;
   grid-template-columns: 1fr;
   margin-left: auto;
   margin-right: auto;
   padding: 25px;
   justify-items: center;
-}
+}*/
 
 section{
   margin-left: auto;
@@ -34,6 +34,7 @@ section{
 }
 
 h2{
+  padding-top: 20px;
   color: yellow;
 }
 
@@ -46,22 +47,29 @@ h2{
   padding-bottom: 90px;
 }
 
-img{
-  width: 20%;
-  height: auto;
-}
-
 #quantity{
   font-size: 18px
 }
 
 #container2 img {
-  width: 25%;
+  width: 100px;
   height: auto;
 }
 
-/*.subcont{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+#container1 img {
+  width:25%;
+  height: auto;
+}
 
-}*/
+hr{ 
+width: 70%;
+margin-left: auto;
+margin-right: auto;
+height: 8px;
+background-color: white;
+opacity: 70%;
+}
+
+.border-red{
+  border: 10px solid red;
+}
