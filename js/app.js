@@ -4,8 +4,7 @@ function initSession() {
     while (
         cartObj === undefined) {
         cartObj = sessionStorage.getItem('papaGCart');
-        if (cartObj === undefined) {
-            console.log("New browser session, creating cart parent object")
+        if (cartObj === undefined || cartObj === null) {
             // The cartObj didn't exist, must be a new instance - create a new parent obj
             let papaGCart = {
                 "objId": '5246673658',
@@ -19,7 +18,6 @@ function initSession() {
 }
 
 initSession()
-console.log("Session was initalized")
 
 // Handle the submit button functionality
 let addToCartFormNode = document.getElementById('orderForm');
@@ -72,10 +70,10 @@ addToCartFormNode.addEventListener('submit', function(e) {
     if (formCustomPizzaQty !== "") {
         customState = true;
     }
-
+    let submissionType = undefined;
     if (formSpecialtyPizza !== "" || formSpecialtyPizzaQty !== "") {
         // One of these fields was populated, so let's assume this is what they were trying to add
-        let submissionType = 'specialty';
+        submissionType = 'specialty';
         // Make sure we've got everything we need
         if (formSpecialtyPizza === "") {
             alert('Please select a type of specialty pizza.')
@@ -86,7 +84,7 @@ addToCartFormNode.addEventListener('submit', function(e) {
         }
     } else if (customState === true) {
         // One of these fields was populated, so let's assume this is what they were trying to add
-        let submissionType = 'custom';
+        submissionType = 'custom';
         // Make sure we've got everything we need
         let sauceSelectionState = false
         for (item of formCustomSauceArray) {
@@ -113,7 +111,7 @@ addToCartFormNode.addEventListener('submit', function(e) {
             itemQty: formSpecialtyPizzaQty,
             pizzaType: formSpecialtyPizza
         }
-    } else {
+    } else if (submissionType === 'custom') {
         // This is a custom pizza
         cartAddObj = {
             itemType: submissionType,
@@ -122,11 +120,19 @@ addToCartFormNode.addEventListener('submit', function(e) {
             toppingArray: formCustomToppingArray,
             topperArray: formCustomTopperArray
         }
+    } else {
+        console.log("ERROR: No submissionType was passed?")
     }
-    initSession()
     // Get the current cart contentArray from sessionStorage
     cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
     // Append the new cart item into the contentArray
+    if (cartObj === null) {
+        console.log("Cart was null?")
+        // The session must've failed to init on page load? Not sure why this happens
+        initSession()
+        cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
+        console.log(cartObj)
+    }
     cartObj.contentArray.push(cartAddObj)
     // Update the value of the cartObj in the sessionStorage
     sessionStorage.setItem('papaGCart', JSON.stringify(cartObj));
