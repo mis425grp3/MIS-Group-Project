@@ -87,13 +87,17 @@ addToCartFormNode.addEventListener('submit', function(e) {
         submissionType = 'custom';
         // Make sure we've got everything we need
         let sauceSelectionState = false
-        for (item of formCustomSauceArray) {
-            if (item === true) {
+        for (const arrayItem of formCustomSauceArray) {
+            if (arrayItem === true) {
                 sauceSelectionState = true
             }
         }
         if (sauceSelectionState === false) {
             alert('Please select a custom pizza sauce.')
+            return
+        }
+        if (formCustomPizzaQty === "" || formCustomPizzaQty === undefined) {
+            alert('Please select a custom pizza quantity.')
             return
         }
     } else {
@@ -143,6 +147,7 @@ addToCartFormNode.addEventListener('submit', function(e) {
     // Get the current cart contentArray from sessionStorage
     cartObj = JSON.parse(sessionStorage.getItem('papaGCart'));
     console.log(cartObj)
+    alert("The item(s) have been added to your cart successfully.")
 })
 
 // Handle the empty cart button
