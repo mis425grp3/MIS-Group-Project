@@ -30,14 +30,14 @@ for (const listItem of cartContentsObjArray) {
         listItemToppings = "N/A - Specialty Pizza"
         listItemQty = listItem['itemQty'];
         listItemPrice = "12.75"
-        listItemSum = (12.75*parseInt(listItemQty)).toString()
+        listItemSum = (12.75*parseInt(listItemQty)).toFixed(2)
     } else {
         // Determine the name
         listItemName = listItem.pizzaType;
         listItemToppings = "N/A - Specialty Pizza"
         listItemQty = listItem.itemQty;
         listItemPrice = "12.75"
-        listItemSum = (12.75*parseInt(listItemQty)).toString()
+        listItemSum = (12.75*parseInt(listItemQty)).toFixed(2)
     }
 
     // let listItemProductImg = './images/blankPizza.png';
@@ -66,9 +66,7 @@ for (const listItem of cartContentsObjArray) {
         "                    </td>\n" +
         "                    <td>\n" +
         "                        <div class=\"button-container\">\n" +
-        "                            <button class=\"cart-qty-plus\" type=\"button\" value=\"+\">+</button>\n" +
-        "                            <input type=\"text\" name=\"qty\" min=\"0\" class=\"qty form-control\" value=\""+listItemQty+"\"></button>\n" +
-        "                            <button class=\"cart-qty-minus\" type=\"button\" value=\"-\">-</button>\n" +
+        "                            <td>$ <span id=\"quantity\" class=\"qty\">"+listItemQty+"</span></td>\n" +
         "                        </div>\n" +
         "                    </td>\n" +
         "                    <td>$ <span id=\"price3\" class=\"price\">"+listItemPrice+"</span></td>\n" +
